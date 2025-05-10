@@ -14,7 +14,7 @@ while cap.isOpened():
     eyes = eye_cascade.detectMultiScale(gray)
 
     for(x, y, w, h) in eyes:
-        cv.rectangle(frame, (x,y), (x+w, y+h), (255,0,0), 3)
+        cv.rectangle(frame, (x,y), (x+w, y+h), (0,255,0), 3)
 
         cv.imshow("Frame", frame)
 
