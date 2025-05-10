@@ -16,12 +16,11 @@ while cap.isOpened():
     for(x, y, w, h) in eyes:
         cv.rectangle(frame, (x,y), (x+w, y+h), (255,0,0), 3)
 
-        
-        if cv.waitKey(1) & 0xFF == ord('q'):
-            break
+        cv.imshow("Frame", frame)
+
+    key = cv.waitKey(1)
+    if key == 27:
+        break
 
 cap.release()
-    
-
-
-
+cv.destroyAllWindows()
